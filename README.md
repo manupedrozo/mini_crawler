@@ -27,11 +27,11 @@ pip install -r requirements.txt
 ```
 ## Usage
 The `MiniCrawler` constructor has two optional arguments:
-- `config_path`:  path to the config.json file (defaults to ../config.json)
-- `output_folder`:  path to the output folder where the crawled tweets will be stored (defaults to ../data)
+- `config_path`:  path to the config.json file (defaults to ./config.json)
+- `output_folder`:  path to the output folder where the crawled tweets will be stored (defaults to ./data)
 
 ```python
-crawler = MiniCrawler(config_path="./config/config.json", output_folder="../data/my_data")
+crawler = MiniCrawler(config_path="../config/config.json", output_folder="../data/my_data")
     result = crawler.search_by_terms(["covid", "coronavirus", "covid-19", "#covid-19", "#coronavirus"], 100)
     n = 1
     for tweet in result:

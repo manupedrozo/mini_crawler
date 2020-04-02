@@ -15,7 +15,7 @@ class MiniCrawler(twython.Twython):
         import copy
 
         
-        config_path = copy.copy(kwargs.pop('config_path', '../config.json'))
+        config_path = copy.copy(kwargs.pop('config_path', './config.json'))
 
         if not os.path.exists(os.path.abspath(config_path)):
             raise Exception('config file not found')
@@ -29,7 +29,7 @@ class MiniCrawler(twython.Twython):
         self.apikeys = copy.copy(apikeys) # keep a copy
         #self.crawler_id = kwargs.pop('crawler_id', None)
 
-        self.output_folder = os.path.abspath(kwargs.pop('output_folder', '../data'))
+        self.output_folder = os.path.abspath(kwargs.pop('output_folder', './data'))
         if not os.path.exists(self.output_folder):
             os.makedirs(self.output_folder)
 
